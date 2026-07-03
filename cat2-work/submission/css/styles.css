@@ -1,0 +1,276 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fafdfa;
+    color: #2b2b2b;
+}
+
+/* Hide the structural Radio Inputs from view */
+input[type="radio"] {
+    display: none;
+}
+
+/* Header Container Layout (Flexbox aligning logo left, navigation labels right) */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 6%;
+    background: linear-gradient(135deg, #133a1b, #1e5c2b); 
+    border-bottom: 5px solid #fbc02d; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#logo img {
+    height: 65px; 
+    width: auto;
+    display: block;
+}
+
+/* Horizontal Menu Layout */
+#main-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+/* Styling Clickable Labels to look and act like Menu Buttons */
+#main-nav-links .nav-label {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hover style for any non-selected link item label tabs */
+#main-nav-links .nav-label:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* css switch engine */
+
+/* 1. Toggle Active Menu Tab colors (Text to deep green, background turns yellow) */
+#tab-home:checked ~ .main-header .label-home,
+#tab-about:checked ~ .main-header .label-about,
+#tab-products:checked ~ .main-header .label-products,
+#tab-animals:checked ~ .main-header .label-animals,
+#tab-wishlist:checked ~ .main-header .label-wishlist {
+    color: #133a1b;
+    background-color: #fbc02d;
+}
+
+/* 2. Hide all layout main text content panels by default */
+main .content-section {
+    display: none;
+    animation: smoothFadeIn 0.5s ease-out;
+}
+
+/* 3. Reveal targeted panels depending on which radio tracker is selected */
+#tab-home:checked ~ main #home,
+#tab-about:checked ~ main #about,
+#tab-products:checked ~ main #products,
+#tab-animals:checked ~ main #animals,
+#tab-wishlist:checked ~ main #wishlist {
+    display: block;
+}
+
+/* Content Panel Interior Typography and Component boxes styling */
+main {
+    flex: 1;
+    padding: 40px 6%;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #133a1b;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-left: 5px solid #fbc02d;
+    padding-left: 12px;
+}
+
+h3 {
+    color: #1e5c2b;
+    margin: 25px 0 10px 0;
+    font-size: 1.3rem;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.Contacts, .Vision, .Mission, .future {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 4px solid #1e5c2b;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+}
+
+/* Clean Sticky Footer Section Alignment layout */
+footer {
+    background-color: #133a1b;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 4px solid #fbc02d;
+    margin-top: auto;
+}
+
+/* Smooth Panel Transition Entry effect CSS Animation rules */
+@keyframes smoothFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*  horizontally alignment of the processing images */
+.image-row {
+    display: flex;
+    gap: 20px;         
+    margin-top: 20px;  
+    width: 100%;       
+}
+
+/* Individual rules applied to both images simultaneously */
+.side-img {
+    flex: 1;            
+    height: 300px;      
+    object-fit: cover;  /* Magic property: crops images evenly into their box so they don't look squished */
+    border-radius: 6px; 
+}
+/* Responsive screen adjustment */
+@media (max-width: 600px) {
+    .image-row {
+        flex-direction: column;
+    }
+}
+
+/* Product List Styling */
+.product-item {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 4px solid #fbc02d;
+    border-radius: 5px;
+}
+
+.product-item h4 {
+    margin: 0 0 5px 0;
+    color: #133a1b;
+}
+
+.product-price {
+    color: #1e5c2b;
+    font-weight: bold;
+    margin: 0;
+}
+
+   /*Wishlist Styles*/
+
+#wishlist-form {
+    margin: 20px 0;
+}
+
+#wishlist-form label {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+    color: #133a1b;
+}
+
+#wishlist-form input,
+#wishlist-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#wishlist-form button {
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: #133a1b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#wishlist-form button:hover {
+    background: #1e5c2b;
+}
+
+.dynamic-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.dynamic-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #fbc02d;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.dynamic-list li strong {
+    color: #133a1b;
+}
+
+.dynamic-list li p {
+    margin: 5px 0 0 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}

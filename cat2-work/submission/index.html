@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Soul Gardens Meats & More</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="favicon" href="images/link_192.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <input type="radio" name="tab-group" id="tab-home" checked>
+    <input type="radio" name="tab-group" id="tab-about">
+    <input type="radio" name="tab-group" id="tab-products">
+    <input type="radio" name="tab-group" id="tab-animals">
+    <input type="radio" name="tab-group" id="tab-wishlist">
+
+    <header class="main-header">
+        <section id="logo">
+            <img src="images/link_192.png" alt="Soul Garden Meats and More Logo">
+        </section>
+
+        <nav>
+            <ul id="main-nav-links">
+                <li><label for="tab-home" class="nav-label label-home">Home</label></li>
+                <li><label for="tab-about" class="nav-label label-about">About us</label></li>
+                <li><label for="tab-products" class="nav-label label-products">Our Products</label></li>
+                <li><label for="tab-animals" class="nav-label label-animals">Our animals</label></li>
+                <li><label for="tab-wishlist" class="nav-label label-wishlist">Wishlist</label></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="content-section">
+            <h1>Welcome to Soul Garden Meats and More</h1>
+            <p>
+                Soul Garden Meats and more is a brand under <b>Orbit Feeds Limited(OFL).</b>
+                Orbit Feeds Limited integrates breeding, rearing and sale of pregnant sows and baconers for revenue. In
+                addition, we produce and sell high quality animal feeds to dairy, poultry, and pig farmers under the
+                brand name Orbit Feeds Limited.
+            </p>
+
+            <div class="Contacts">
+                <h3>Contact us</h3>
+                <p>
+                    For inquiries, orders, or more information about our products and services, please feel free to
+                    reach out to us through the following contact details:
+                </p>
+                <ul>
+                    <li><strong>Phone:</strong> +254-700-433-407</li>
+                    <li><strong>Office:</strong> Bibirioni, Limuru off Nairobi-Nakuru highway</li>
+                    <li><strong>Email:</strong> orbitfeeds2019@gmail.com</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About us</h2>
+            <p>
+                Our dream begun small we started out as a small scale piggery farm located in Limuru in the year 2018.
+                We then slowly expanded our farm and officially began our journey in the meat industry in 2021.
+                This was after establishing our own processing plant which now has the capacity to process over 2 tons
+                of meat a day.
+            </p>
+
+            <div class="Vision">
+                <h3>Our Vision</h3>
+                <p>
+                    We strive to integrate the whole process of breeding, rearing and processing of livestock hence
+                    efficient meat operations.
+                    Furthermore, we also hope to empower the local communities and the wider livestock sector in our
+                    country.
+                    Lastly to ensure customer satisfaction.
+                </p>
+                <div class="image-row">
+                    <img src="images/processor image.jpeg" alt="Processing plant" class="side-img">
+                    <img src="images/processor image 2.jpeg" alt="Processing plant 2" class="side-img">
+                </div>
+            </div>
+
+            <div class="Mission">
+                <h3>Our Mission</h3>
+                <p>
+                    To provide high quality meat products to our customers while ensuring the welfare of our animals and
+                    the sustainability of our farming practices.
+                </p>
+            </div>
+
+            <div class="future">
+                <h3>Our Future</h3>
+                <p>
+                    We are committed to continuous improvement and innovation in our products and processes.
+                    We plan to expand our product line and reach more customers while maintaining our commitment to
+                    quality and sustainability.
+                    We hope to be the leading provider of high-quality meat products in our region and beyond.
+                </p>
+            </div>
+        </section>
+
+        <section id="products" class="content-section">
+            <h2>Our Products</h2>
+            <p>
+                We offer a wide range of products, including fresh cuts of pork, as well as specialty items like
+                sausages, bacon.
+                Among other product for more information reach out.
+                <br><br>
+                <img src="images/products 1.png" alt="Our products" style="max-width:100%; height:500px;">
+
+            </p>
+
+            <p id="product-list"></p>
+        </section>
+
+        <section id="wishlist" class="content-section">
+    <h2>Wishlist</h2>
+    <p>Suggest a product you would like to see at Soul Garden Meats and More.</p>
+
+    <form id="wishlist-form">
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" placeholder="e.g chicken breast" >
+
+        <label for="product-description">Product Description:</label>
+        <textarea id="product-description" placeholder="Describe the product..." ></textarea>
+
+        <button type="submit">Add to Wishlist</button>
+    </form>
+
+    <!--where the wish list items appear -->
+    <ul id="wishlistItems" class="dynamic-list">
+        <li>
+            <div>
+                <strong>free range chicken</strong>
+                <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #666;">high chicken quality products from free range chickens</p>
+            </div>
+            <button type="button" class="delete-btn">Delete</button>
+        </li>
+    </ul>
+</section>
+
+        <section id="animals" class="content-section">
+            <h2>Our Animals</h2>
+            <p>
+                We take great care in raising our animals, ensuring they are healthy and well-cared for.
+                Our pigs are raised in a clean and comfortable environment, with access to fresh water and nutritious
+                feed we process ourselves.
+                <br><br>
+                <img src="images/pigs.jpeg" alt="Pigs at the farm" class="side-img">
+                <br><br>
+                
+                As we strategically expand, we have started rearing other animals including various breeds of sheep and
+                chicken.
+                We are committed to ensure all our animals are of good health by having a round the clock veterinary
+                care and regular health checks.
+                Furthermore, we strive to ensure the emotional well-being of our animals by providing them with a
+                comfortable and stimulating environment, as well as regular socialization and enrichment activities.
+                <br><br>
+                Our farm is located in Limuru and is open for visitation by appointment.
+                We welcome you to come and see our animals and learn more about our farming practices.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Soul Garden Meats and More. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
