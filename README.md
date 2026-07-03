@@ -224,4 +224,4 @@ Your submission should reflect your own understanding and implementation, and yo
 
 After the deadline, some or all students may be called to briefly walk through their code in person or in a short one-on-one session.
 
-All the best — make it move, make it useful! ⚡🚀
+All the best — make it move, make it useful! ⚡🚀V
