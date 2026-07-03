@@ -186,3 +186,11 @@ addWishlistItem = function() {
     productDescription.value = '';
     productName.focus();
 };
+// Banner caption toggle
+
+const bannerImage = document.getElementById('banner-image');
+const bannerCaption = document.getElementById('bannerCaption');
+
+bannerImage.addEventListener('click', function() {
+    bannerCaption.classList.toggle('show');
+});
