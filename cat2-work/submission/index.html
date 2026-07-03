@@ -16,6 +16,7 @@
     <input type="radio" name="tab-group" id="tab-products">
     <input type="radio" name="tab-group" id="tab-animals">
     <input type="radio" name="tab-group" id="tab-wishlist">
+    <input type="radio" name="tab-group" id="tab-feedback">
 
     <header class="main-header">
         <section id="logo">
@@ -29,6 +30,7 @@
                 <li><label for="tab-products" class="nav-label label-products">Our Products</label></li>
                 <li><label for="tab-animals" class="nav-label label-animals">Our animals</label></li>
                 <li><label for="tab-wishlist" class="nav-label label-wishlist">Wishlist</label></li>
+                <li><label for="tab-feedback" class="nav-label label-feedback">Feedback</label></li>
             </ul>
         </nav>
     </header>
@@ -139,6 +141,28 @@
         </li>
     </ul>
 </section>
+      <!-- Feedback Form -->
+<section id="feedback" class="content-section">
+    <h2>Customer Feedback</h2>
+    <p>We value your feedback!</p>
+
+    <form id="feedback-form">
+        <label>Your Name:</label>
+        <input type="text" id="feedback-name" placeholder="Enter your name">
+
+        <label>Your Email:</label>
+        <input type="email" id="feedback-email" placeholder="Enter your email">
+
+        <label>Your Message:</label>
+        <textarea id="feedback-message" rows="3" placeholder="Tell us what you think..."></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="feedback-output"></div>
+</section>
+
+
 
         <section id="animals" class="content-section">
             <h2>Our Animals</h2>

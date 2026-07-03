@@ -88,3 +88,33 @@ document.querySelectorAll('.delete-btn').forEach(function(btn) {
         this.parentElement.remove();
     });
 });
+
+
+// Form handling  and validation for feedback form
+const feedbackForm = document.getElementById('feedback-form');
+const feedbackOutput = document.getElementById('feedback-output');
+
+feedbackForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('feedback-name').value.trim();
+    const email = document.getElementById('feedback-email').value.trim();
+    const message = document.getElementById('feedback-message').value.trim();
+    
+    // email validation
+    if (!name || !email || !message) {
+        feedbackOutput.textContent = 'Please fill in all fields!';
+        return;
+    }
+    
+    if (!email.includes('@')) {
+        feedbackOutput.textContent = 'Please enter a valid email!';
+        return;
+    }
+    
+    // show feedback
+    feedbackOutput.textContent = `Thanks ${name}! We received your message: "${message}"`;
+    
+    // Clear form
+    this.reset();
+});

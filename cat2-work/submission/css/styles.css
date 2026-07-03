@@ -67,7 +67,8 @@ input[type="radio"] {
 #tab-about:checked ~ .main-header .label-about,
 #tab-products:checked ~ .main-header .label-products,
 #tab-animals:checked ~ .main-header .label-animals,
-#tab-wishlist:checked ~ .main-header .label-wishlist {
+#tab-wishlist:checked ~ .main-header .label-wishlist,
+#tab-feedback:checked ~ .main-header .label-feedback {
     color: #133a1b;
     background-color: #fbc02d;
 }
@@ -83,7 +84,8 @@ main .content-section {
 #tab-about:checked ~ main #about,
 #tab-products:checked ~ main #products,
 #tab-animals:checked ~ main #animals,
-#tab-wishlist:checked ~ main #wishlist {
+#tab-wishlist:checked ~ main #wishlist,
+#tab-feedback:checked ~ main #feedback {
     display: block;
 }
 
@@ -122,7 +124,7 @@ ul {
     line-height: 1.8;
 }
 
-.Contacts, .Vision, .Mission, .future {
+.Contacts, .Vision, .Mission, .future, .Feedback {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -273,4 +275,30 @@ footer {
 
 .delete-btn:hover {
     background: #c82333;
+}
+
+/* Feedback Form styling */
+#feedback-form input,
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#feedback-form button {
+    padding: 10px 30px;
+    background: #133a1b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#feedback-output {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #f5f5f5;
 }
