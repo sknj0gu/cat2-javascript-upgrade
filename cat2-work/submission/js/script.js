@@ -118,3 +118,71 @@ feedbackForm.addEventListener('submit', function(event) {
     // Clear form
     this.reset();
 });
+
+
+// Save wishlist with localStorage
+// Load items when page loads
+function loadWishlist() {
+    const saved = localStorage.getItem('wishlist');
+    if (saved) {
+        const items = JSON.parse(saved);
+        items.forEach(function(item) {
+            addItemToPage(item.name, item.desc);
+        });
+    }
+}
+
+// Save items to localStorage
+function saveWishlist() {
+    const items = [];
+    document.querySelectorAll('#wishlistItems li').forEach(function(li) {
+        items.push({
+            name: li.querySelector('strong').textContent,
+            desc: li.querySelector('p').textContent
+        });
+    });
+    localStorage.setItem('wishlist', JSON.stringify(items));
+}
+
+// Add item to page
+function addItemToPage(name, desc) {
+    const li = document.createElement('li');
+    const div = document.createElement('div');
+    const strong = document.createElement('strong');
+    strong.textContent = name;
+    const p = document.createElement('p');
+    p.textContent = desc;
+    div.appendChild(strong);
+    div.appendChild(p);
+    
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.className = 'delete-btn';
+    deleteBtn.addEventListener('click', function() {
+        li.remove();
+        saveWishlist();
+    });
+    
+    li.appendChild(div);
+    li.appendChild(deleteBtn);
+    wishlistItems.appendChild(li);
+}
+
+// Load saved items
+loadWishlist();
+
+// Save when adding new item
+const originalAdd = addWishlistItem;
+addWishlistItem = function() {
+    const name = productName.value.trim();
+    const desc = productDescription.value.trim();
+    if (name === '' || desc === '') {
+        alert('Please fill in both fields!');
+        return;
+    }
+    addItemToPage(name, desc);
+    saveWishlist();
+    productName.value = '';
+    productDescription.value = '';
+    productName.focus();
+};
