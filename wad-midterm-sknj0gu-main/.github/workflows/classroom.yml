@@ -1,0 +1,57 @@
+name: Autograder
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  grading:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          path: submission
+
+      - name: Run Autograder
+        id: grader
+        uses: webtech-network/autograder@main
+        with:
+          template-preset: "webdev"
+          feedback-type: "default"
+          include-feedback: "false"
+          openai-key: ${{ secrets.ENGINE }}
+
+      - name: Log Grade to Master Google Sheet
+        if: always()
+        uses: jroehl/gsheet.action@v2.0.0
+        with:
+          spreadsheetId: ${{ secrets.GSHEET_SPREADSHEET_ID_WM }}
+          commands: |
+            [
+              {
+                "command": "appendData",
+                "args": {
+                  "worksheetTitle": "Grades",
+                  "minCol": 1,
+                  "valueInputOption": "RAW",
+                  "data": [
+                    [
+                      "${{ github.actor }}", 
+                      "${{ github.repository }}", 
+                      "${{ steps.grader.outputs.total_score }}", 
+                      "${{ github.event.head_commit.timestamp }}"
+                    ]
+                  ]
+                }
+              }
+            ]
+        env:
+          GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL_WM }}
+          GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY_WM }}

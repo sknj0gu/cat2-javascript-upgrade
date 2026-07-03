@@ -1,0 +1,8 @@
+{
+  "general": {
+    "show_score": true,
+    "show_passed_tests": true,
+    "add_report_summary": false
+  },
+  "default": {}
+}

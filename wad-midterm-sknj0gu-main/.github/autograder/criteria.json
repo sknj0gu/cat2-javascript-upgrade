@@ -1,0 +1,139 @@
+{
+  "test_library": "web_dev",
+  "base": {
+    "weight": 100,
+    "subjects": [
+      {
+        "subject_name": "content_and_style",
+        "weight": 70,
+        "subjects": [
+          {
+            "subject_name": "html",
+            "weight": 60,
+            "subjects": [
+              {
+                "subject_name": "layout_tags",
+                "weight": 40,
+                "tests": [
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "header" }, { "name": "required_count", "value": 1 }] },
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "nav" }, { "name": "required_count", "value": 1 }] },
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "main" }, { "name": "required_count", "value": 1 }] },
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "article" }, { "name": "required_count", "value": 2 }] },
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "footer" }, { "name": "required_count", "value": 1 }] }
+                ]
+              },
+              {
+                "subject_name": "basic_structure",
+                "weight": 20,
+                "tests": [
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "html" }, { "name": "required_count", "value": 1 }] },
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "body" }, { "name": "required_count", "value": 1 }] },
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "head" }, { "name": "required_count", "value": 1 }] },
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "title" }, { "name": "required_count", "value": 1 }] },
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "h1" }, { "name": "required_count", "value": 1 }] },
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "meta" }, { "name": "required_count", "value": 4 }] }
+                ]
+              },
+              {
+                "subject_name": "functional_elements",
+                "weight": 20,
+                "tests": [
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "a" }, { "name": "required_count", "value": 1 }] },
+                  { "file": "submission/index.html", "name": "has_tag", "parameters": [{ "name": "tag", "value": "img" }, { "name": "required_count", "value": 1 }] }
+                ]
+              },
+              {
+                "subject_name": "link",
+                "weight": 20,
+                "tests": [
+                  { "file": "submission/index.html", "name": "check_css_linked" }
+                ]
+              }
+            ]
+          },
+          {
+            "subject_name": "css",
+            "weight": 40,
+            "subjects": [
+              {
+                "subject_name": "responsivity",
+                "weight": 30,
+                "tests": [
+                  { "file": "submission/css/styles.css", "name": "check_media_queries" },
+                  { "file": "submission/css/styles.css", "name": "check_flexbox_usage" },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "grid-template-columns" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "grid-template-rows" }, { "name": "count", "value": 1 }] }
+                ]
+              },
+              {
+                "subject_name": "style",
+                "weight": 50,
+                "tests": [
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "font-size" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "font-family" }, { "name": "count", "value": 2 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": ":root" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "text-align" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "display" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "margin" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "padding" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "width" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "transition" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "border-radius" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "has_style", "parameters": [{ "name": "style", "value": "background-color" }, { "name": "count", "value": 1 }] },
+                  { "file": "submission/css/styles.css", "name": "uses_relative_units" }
+                ]
+              },
+              {
+                "subject_name": "basic_selectors",
+                "weight": 20,
+                "tests": [
+                  { "file": "submission/index.html", "name": "has_attribute", "parameters": [{ "name": "attribute", "value": "class" }, { "name": "required_count", "value": 3 }] },
+                  { "file": "submission/index.html", "name": "has_attribute", "parameters": [{ "name": "attribute", "value": "id" }, { "name": "required_count", "value": 3 }] }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "subject_name": "best_practices",
+        "weight": 30,
+        "subjects": [
+          {
+            "subject_name": "css_best_practices",
+            "weight": 40,
+            "tests": [
+              { "file": "submission/index.html", "name": "check_no_unclosed_tags" },
+              { "file": "submission/index.html", "name": "check_no_inline_styles" },
+              { "file": "submission/index.html", "name": "uses_semantic_tags" },
+              { "file": "submission/index.html", "name": "check_all_images_have_alt" },
+              { "file": "submission/index.html", "name": "check_html_direct_children" },
+              { "file": "submission/index.html", "name": "has_attribute", "parameters": [{ "name": "attribute", "value": "lang" }, { "name": "required_count", "value": 1 }] }
+            ]
+          },
+          {
+            "subject_name": "project_structure",
+            "weight": 30,
+            "tests": [
+              { "file": "all", "name": "check_project_structure", "parameters": [{ "name": "expected_structure", "value": "submission/resources/conversation.txt" }] },
+              { "file": "all", "name": "check_project_structure", "parameters": [{ "name": "expected_structure", "value": "submission/images/sketch.jpg" }] },
+              { "file": "all", "name": "check_project_structure", "parameters": [{ "name": "expected_structure", "value": "submission/images/banner.jpg" }] },
+              { "file": "all", "name": "check_project_structure", "parameters": [{ "name": "expected_structure", "value": "submission/css/styles.css" }] },
+              { "file": "all", "name": "check_project_structure", "parameters": [{ "name": "expected_structure", "value": "submission/index.html" }] }
+            ]
+          },
+          {
+            "subject_name": "SEO_best_practices",
+            "weight": 30,
+            "tests": [
+              { "file": "submission/index.html", "name": "has_attribute", "parameters": [{ "name": "attribute_names", "value": ["author"] }, { "name": "required_count", "value": 1 }] },
+              { "file": "submission/index.html", "name": "has_attribute", "parameters": [{ "name": "attribute_names", "value": ["description"] }, { "name": "required_count", "value": 1 }] },
+              { "file": "submission/index.html", "name": "has_attribute", "parameters": [{ "name": "attribute_names", "value": ["viewport"] }, { "name": "required_count", "value": 1 }] },
+              { "file": "submission/index.html", "name": "has_attribute", "parameters": [{ "name": "attribute_names", "value": ["keywords"] }, { "name": "required_count", "value": 1 }] }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
